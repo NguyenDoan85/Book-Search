@@ -15,6 +15,7 @@ const resolvers = {
             throw new AuthenticationError('Not logged in!')
         },
     },
+
     Mutation: {
         //create user
         addUser: async (parent, args) => {
@@ -35,7 +36,7 @@ const resolvers = {
                 throw new AuthenticationError('Your email or password is incorrect!');
             };
         },
-        //update book with user
+        //save book with user
         saveBook: async (parent, args, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
