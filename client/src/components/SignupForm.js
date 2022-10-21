@@ -13,6 +13,8 @@ const SignupForm = () => {
     email: "",
     password: "",
   });
+  console.log("useState");
+
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
@@ -20,6 +22,7 @@ const SignupForm = () => {
 
   // declared the addUser with the useMutation
   const [addUser, { error }] = useMutation(ADD_USER);
+  console.log("useMutation");
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -28,6 +31,7 @@ const SignupForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log("hanleFormSubmit");
 
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
