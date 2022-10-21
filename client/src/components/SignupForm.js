@@ -13,7 +13,6 @@ const SignupForm = () => {
     email: "",
     password: "",
   });
-  console.log("useState");
 
   // set state for form validation
   const [validated] = useState(false);
@@ -22,7 +21,6 @@ const SignupForm = () => {
 
   // declared the addUser with the useMutation
   const [addUser, { error }] = useMutation(ADD_USER);
-  console.log("useMutation");
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
